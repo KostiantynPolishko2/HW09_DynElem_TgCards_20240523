@@ -36,6 +36,13 @@ header{
     background-color: black;
 }
 
+#section_emoji{
+    height: 36px;
+    width: 280px;
+    margin: auto;
+    /* background-color: yellow; */
+}
+
 .item_flex_row{
     display: flex;
     flex-direction: row;
@@ -91,4 +98,26 @@ section#section_search p{
 
 img{
     height: 20px;
+}
+
+.item_count{
+    background-color: rgb(85, 164, 248);
+    height: 16px;
+    min-width: 16px;
+    border-radius: 8px;
+}
+
+.item_count > p {
+    color: white;
+    font-weight: 600;
+    font-size: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0px 5px;
+}
+
+.item_emoji{
+    font-size: 14px;
+    margin-right: 3px;
+    color: rgb(80, 155, 227);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
