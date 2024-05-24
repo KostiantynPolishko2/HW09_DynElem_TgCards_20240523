@@ -21,19 +21,34 @@ header{
     background-color: rgb(35, 48, 63);
 }
 
-header > section{
+#section_chat{
     width: 275px;
     height: 54px;
     margin: auto;
     /* background-color: aqua; */
 }
 
+#section_search{
+    width: 290px;
+    height: 30px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: black;
+}
+
 .item_flex_row{
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+
+.space_between{
     justify-content: space-between;
 }
 
+.space_center{
+    justify-content: center;
+}
 .row_inner{
     position: relative;
     top: 50%;
@@ -41,7 +56,7 @@ header > section{
     transform: translate(-50%, -50%);
 }
 
-div.item_flex_row p {
+section#section_chat p {
     color: rgb(80, 155, 227);
     font-weight: 600;
     font-size: 12px;
@@ -49,16 +64,29 @@ div.item_flex_row p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-div.item_flex_row > p{
+section#section_chat div.item_flex_row > p{
     color: white;
     font-weight: 700;
 }
 
-.material-icons.custom-icon{
+section#section_search p{
+    color: rgb(152, 157, 161);
+    font-weight: 600;
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.material-icons.custom-icon_open{
     color: rgb(80, 155, 227);
     font-size: 18px;
     font-weight: 400;
     line-height: 20px;
+}
+
+.material-icons.custom-icon_search{
+    color: rgb(152, 157, 161);
+    font-size: 20px;
+    font-weight: 600;
 }
 
 img{
