@@ -2,7 +2,7 @@
     height: 60px;
     width: 290px;
     margin: auto;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .item_photo{
@@ -19,15 +19,14 @@
 .item_txt{
     height: 58px;
     width: 230px;
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     border-bottom: 2px solid rgb(47, 52, 59);
 }
 
 .meme_name{
-    position: relative;
-    top: 10px;
+    margin-top: 10px;
     height: 12px;
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
 }
 
 div.item_txt p{
@@ -47,11 +46,21 @@ div.item_txt p{
 
 div.item_txt > div > div {
     width: 185px;
-    background-color: brown;
+    /* background-color: brown; */
 }
 
 .material-icons.custom-icon_volume-off{
     color: rgb(152, 157, 161);
     font-size: 12px;
     font-weight: 600;
+}
+
+.meme_date{
+    height: 28px;
+    background-color: blueviolet;
+}
+
+.char_photo{
+    height: 15px;
+    width: 15px;
 }
