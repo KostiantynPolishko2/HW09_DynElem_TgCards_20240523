@@ -1,0 +1,55 @@
+.group_chat{
+    height: 60px;
+    width: 290px;
+    margin: auto;
+    /* background-color: yellow; */
+}
+
+.item_photo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    background-image: url("./img/cat_angry.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.item_txt{
+    height: 40px;
+    width: 230px;
+    margin-left: 5px;
+    /* background-color: chartreuse; */
+}
+
+.meme_name{
+    height: 12px;
+    /* background-color: cadetblue; */
+}
+
+div.item_txt p{
+    font-size: 12px;
+    line-height: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+.txt_meme{
+    color: white;
+}
+
+.txt_time{
+    color: rgb(152, 157, 161);
+}
+
+div.item_txt > div > div {
+    width: 185px;
+    /* background-color: brown; */
+}
+
+.material-icons.custom-icon_volume-off{
+    color: rgb(152, 157, 161);
+    font-size: 12px;
+    font-weight: 600;
+}
