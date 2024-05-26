@@ -1,11 +1,10 @@
-const dictTxts = new Map([['txt_meme', 'мемы для страданий'], ['txt_time', '09:52'], ['txt_img_type', 'Photo'], ['txt_msg_count', '131']]);
-const attrImgs = new Map([['img_item_photo', './img/cat_angry.png'], ['img_chat_foto', './img/suffering.jpg']]);
-
 document.addEventListener('DOMContentLoaded', (e) => {
     console.log('Start');
 
     const cardChat = createGroupChat(document.querySelector('main#chat'));
-    cardChat(dictTxts);
+    cardChat('suffer', dictTxts.get('suffer'), dictImgLinks.get('suffer'));
+    cardChat('angry', dictTxts.get('angry'), dictImgLinks.get('angry'));
+    cardChat('alex', dictTxts.get('alex'), dictImgLinks.get('alex'));
 })
 
 const createTag = (nameElement, nameStyle) => {
@@ -36,12 +35,12 @@ const setImgAttr = (element, src, alt = 'logo') => {
 
 const createGroupChat = (element) => {
     const divTagClassNames = ['item_photo', 'item_txt', 'item_meme_name', 'item_meme_description', 'item_flex_row', 'item_meme_date', 'chat_photo', 'msg_count'];
-    const pTagClassNames = Array.from(dictTxts.keys());
-    const imgTagClassNames = Array.from(attrImgs.keys());
+    const pTagClassNames = ['txt_meme', 'txt_time', 'txt_img_type', 'txt_msg_count'];
 
-    return (dictTxts) => {
-
+    return (id, dictTxts, dictAttrImgs) => {
+        const imgTagClassNames = Array.from(dictAttrImgs.keys());
         const dictDivs = createTagDict('div', divTagClassNames);
+
         dictDivs.get('item_meme_name').className += ' item_flex_row space_between';
         dictDivs.get('item_meme_description').className += ' item_flex_row';
 
@@ -49,7 +48,7 @@ const createGroupChat = (element) => {
         const dictImg = createTagDict('img', imgTagClassNames);
 
         for(let _className of imgTagClassNames){
-            setImgAttr(dictImg.get(_className), attrImgs.get(_className));
+            setImgAttr(dictImg.get(_className), dictAttrImgs.get(_className));
         }
 
         let icon_volume_off = createTag('i', 'user-icon_volume-off');
@@ -60,12 +59,15 @@ const createGroupChat = (element) => {
             insertTxtNode(dictP.get(_className), dictTxts.get(_className));
         }
 
-        layoutGroupChat(element, dictDivs, dictP, dictImg, icon_volume_off);
+        setStyleMsgCount(dictP.get(pTagClassNames[3]));
+
+        layoutGroupChat(element, id, dictDivs, dictP, dictImg, icon_volume_off);
     }
 }
 
-const layoutGroupChat = (element, dictDivs, dictP, dictImg, icon_volume_off) => {
+const layoutGroupChat = (element, identifier, dictDivs, dictP, dictImg, icon_volume_off) => {
     let sectionGroupChat = createTag('section', 'group_chat');
+    sectionGroupChat.id = identifier;
 
     element.appendChild(sectionGroupChat);
     sectionGroupChat.appendChild(dictDivs.get('item_photo')).appendChild(dictImg.get('img_item_photo'));
@@ -78,4 +80,10 @@ const layoutGroupChat = (element, dictDivs, dictP, dictImg, icon_volume_off) => 
     dictDivs.get('chat_photo').appendChild(dictImg.get('img_chat_foto'));
     dictDivs.get('item_flex_row').appendChild(dictP.get('txt_img_type'));
     dictDivs.get('item_meme_date').appendChild(dictDivs.get('msg_count')).appendChild(dictP.get('txt_msg_count'));
+}
+
+const setStyleMsgCount = (element) => {
+    console.log(element.textContent);
+
+    // document.getElementsByTagName('p')[0].textContent;
 }
