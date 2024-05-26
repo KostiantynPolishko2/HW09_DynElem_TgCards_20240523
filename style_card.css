@@ -2,7 +2,7 @@
     height: 60px;
     width: 290px;
     margin: auto;
-    /* background-color: yellow; */
+    background-color: yellow;
 }
 
 .item_photo{
@@ -17,7 +17,7 @@
 .item_txt{
     height: 59px;
     width: 230px;
-    /* background-color: chartreuse; */
+    background-color: chartreuse;
     border-bottom: 2px solid rgb(47, 52, 59);
     float: left;
 }
@@ -25,7 +25,7 @@
 .item_meme_name{
     margin-top: 10px;
     height: 12px;
-    /* background-color: cadetblue; */
+    background-color: rgb(95, 110, 160);
 }
 
 div.item_txt p{
@@ -45,7 +45,7 @@ div.item_txt p{
 
 div.item_txt > div > div {
     width: 185px;
-    /* background-color: brown; */
+    background-color: brown;
 }
 
 .material-icons.user-icon_volume-off{
@@ -58,7 +58,7 @@ div.item_txt > div > div {
     position: relative;
     margin-top: 4px;
     height: 28px;
-    /* background-color: rgb(255, 255, 255); */
+    background-color: rgb(255, 255, 255);
 }
 
 .chat_photo{
