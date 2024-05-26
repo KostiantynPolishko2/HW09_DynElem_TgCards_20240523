@@ -14,13 +14,15 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    float: left;
 }
 
 .item_txt{
-    height: 58px;
+    height: 59px;
     width: 230px;
     /* background-color: chartreuse; */
     border-bottom: 2px solid rgb(47, 52, 59);
+    float: left;
 }
 
 .meme_name{
@@ -56,11 +58,50 @@ div.item_txt > div > div {
 }
 
 .meme_date{
+    position: relative;
+    margin-top: 4px;
     height: 28px;
-    background-color: blueviolet;
+    /* background-color: rgb(255, 255, 255); */
 }
 
 .char_photo{
     height: 15px;
     width: 15px;
+}
+
+.msg_count{
+    position: absolute;
+    height: 16px;
+    min-width: 16px;
+    max-width: 32px;
+    background-color: rgb(105, 119, 129);
+    border-radius: 8px;
+    bottom: 0;
+    right: 0;
+}
+
+.msg_count > p {
+    color: black;
+    font-weight: 600;
+    font-size: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 16px;
+    text-align: center;
+    padding: 0px 5px;
+    margin-top: 2px;
+}
+
+div.meme_date > div.item_flex_row{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div.meme_date > div.item_flex_row p{
+    color: rgb(105, 119, 129);
+    margin: 0px 5px;
+    line-height: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
