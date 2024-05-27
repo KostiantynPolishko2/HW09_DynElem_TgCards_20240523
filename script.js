@@ -59,8 +59,6 @@ const createGroupChat = (element) => {
             insertTxtNode(dictP.get(_className), dictTxts.get(_className));
         }
 
-        setStyleMsgCount(dictP.get(pTagClassNames[3]));
-
         layoutGroupChat(element, id, dictDivs, dictP, dictImg, icon_volume_off);
     }
 }
@@ -80,10 +78,14 @@ const layoutGroupChat = (element, identifier, dictDivs, dictP, dictImg, icon_vol
     dictDivs.get('chat_photo').appendChild(dictImg.get('img_chat_foto'));
     dictDivs.get('item_flex_row').appendChild(dictP.get('txt_img_type'));
     dictDivs.get('item_meme_date').appendChild(dictDivs.get('msg_count')).appendChild(dictP.get('txt_msg_count'));
+
+    setStyleMsgCount(identifier, dictP.get('txt_msg_count'));
 }
 
-const setStyleMsgCount = (element) => {
-    console.log(element.textContent);
+const setStyleMsgCount = (identifier, element) => {
 
-    // document.getElementsByTagName('p')[0].textContent;
+    if (element.textContent == '0'){
+        element.style.color = 'transparent';
+        document.getElementById(identifier).querySelector('div.msg_count').style.backgroundColor = 'transparent';
+    }
 }
